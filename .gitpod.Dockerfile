@@ -21,7 +21,7 @@ RUN cd perl-5.36.0  \
     && make -j 4 \
     && sudo make install 
 
-RUN 'export PATH=/opt/perl/bin:$PATH' >> /home/gitpod/.bashrc
+RUN echo 'export PATH=/opt/perl/bin:$PATH' >> /home/gitpod/.bashrc
 
 
 
