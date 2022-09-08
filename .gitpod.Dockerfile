@@ -20,8 +20,10 @@ RUN cd perl-5.36.0  \
         -Dprefix='/opt/perl' \
     && make -j 4 \
     && sudo make install 
+    && cd..
 
-RUN curl -o /tmp/cpm -sL --compressed https://git.io/cpm \
-    && chmod 755 /tmp/cpm \
-    && /tmp/cpm install -g App::cpm IO::Socket::SSL Cpanel::JSON::XS \
-    && rm -fr /root/.perl-cpm /tmp/cpm
+
+#RUN curl -o /tmp/cpm -sL --compressed https://git.io/cpm \
+#    && chmod 755 /tmp/cpm \
+#    && /tmp/cpm install -g App::cpm IO::Socket::SSL Cpanel::JSON::XS \
+#    && rm -fr /root/.perl-cpm /tmp/cpm
