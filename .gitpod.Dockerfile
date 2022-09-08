@@ -21,6 +21,8 @@ RUN cd perl-5.36.0  \
     && make -j 4 \
     && sudo make install 
 
+RUN 'export PATH=/opt/perl/bin:$PATH' >> /home/gitpod/.bashrc
+
 
 
 #RUN curl -o /tmp/cpm -sL --compressed https://git.io/cpm \
