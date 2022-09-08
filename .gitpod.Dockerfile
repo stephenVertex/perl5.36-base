@@ -20,7 +20,7 @@ RUN cd perl-5.36.0  \
         -Dprefix='/opt/perl' \
     && make -j 4 \
     && sudo make install 
-    && cd..
+
 
 
 #RUN curl -o /tmp/cpm -sL --compressed https://git.io/cpm \
